@@ -19,8 +19,10 @@ class Index
         $psr17Factory = new Psr17Factory();
 
         $data = [
-            "header" => "Index page",
-            "message" => "Hello, this is the index page, rendered as a layout.",
+            "header" => "Home page",
+            "message" => "Welcome to My Gatzy Game",
+            "title" => "Welcome to My Game",
+            "menu_home_class" => "selected"
         ];
 
         $body = renderView("layout/page.php", $data);

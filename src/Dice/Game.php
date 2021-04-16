@@ -14,7 +14,7 @@ use function Mos\Functions\sendResponse;
  */
 class Game
 {
-    public function roll(): void
+    public function roll(): string
     {
         $cntDices = 1;
         if (isset($_SESSION['cnt-dices'])) {
@@ -61,10 +61,10 @@ class Game
         $data["menu_game21_class"] = "selected";
 
         $body = renderView("layout/dice.php", $data);
-        sendResponse($body);
+        return $body;
     }
 
-    public function playGame(): void
+    public function playGame(): string
     {
         $data = [
             "header" => "Dice Game was Ended!",
@@ -105,7 +105,7 @@ class Game
         $data["menu_game21_class"] = "selected";
 
         $body = renderView("layout/result.php", $data);
-        sendResponse($body);
+        return $body;
     }
 
     public function updateHistory($winner): void

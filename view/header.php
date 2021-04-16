@@ -21,10 +21,11 @@ use function Mos\Functions\url;
 
 <header>
     <nav>
-        <a class = "" href="<?= url("/") ?>" class="<?= $menu_home_class ?>">Home</a>
-        <a class = "" href="<?= url("/dice") ?>" class="<?= $menu_game21_class ?>">Game 21</a>
-        <a class = "" href="<?= url("/session") ?>" class="<?= $menu_session_class ?>">Session</a>
-        <a class = "" href="<?= url("/debug") ?>" class="<?= $menu_debug_class ?>">Debug</a>
+        <a class="" href="<?= url("/") ?>" class="<?= $menu_home_class ?>">Home</a>
+        <a class="" href="<?= url("/dice") ?>" class="<?= $menu_game21_class ?>">Game 21</a>
+        <a class="" href="<?= url("/yatzy") ?>" class="<?= $menu_yatzy_class ?>">Yatzy</a>
+        <a class="" href="<?= url("/session") ?>" class="<?= $menu_session_class ?>">Session</a>
+        <a class="" href="<?= url("/debug") ?>" class="<?= $menu_debug_class ?>">Debug</a>
     </nav>
 </header>
 <main>

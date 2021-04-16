@@ -9,6 +9,7 @@ use Nyholm\Psr7\Response;
 use Psr\Http\Message\ResponseInterface;
 
 use function Mos\Functions\destroySession;
+use function Mos\Functions\initSession;
 use function Mos\Functions\renderView;
 use function Mos\Functions\url;
 
@@ -37,5 +38,16 @@ class Session
         return (new Response())
             ->withStatus(301)
             ->withHeader("Location", url("/session"));
+    }
+
+
+
+    public function init(): ResponseInterface
+    {
+        initSession();
+
+        return (new Response())
+            ->withStatus(301)
+            ->withHeader("Location", url("/dice"));
     }
 }
