@@ -64,7 +64,9 @@ class Yatzy
     {
         $psr17Factory = new Psr17Factory();
 
-        if ($_POST['action'] == 'roll') {
+        $action = isset($_POST['action']) ? $_POST['action'] : '';
+
+        if ($action == 'roll') {
             $data = [
                 "header" => "Yatzy",
                 "message" => "",
@@ -75,7 +77,7 @@ class Yatzy
 
             $yatzy = new Game();
             $yatzy->rollDices($_POST, 'scorecard-you');
-        } elseif ($_POST['action'] == 'computer-turn') {
+        } elseif ($action == 'computer-turn') {
             $data = [
                 "header" => "Yatzy",
                 "message" => "",

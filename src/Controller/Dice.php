@@ -49,7 +49,10 @@ class Dice
             "menu_game21_class" => "selected"
         ];
 
-        saveSettingSession(intval($_POST['cnt-dices']), $_POST['dice-type']);
+        $cntDices = isset($_POST['cnt-dices']) ? intval($_POST['cnt-dices']) : 2;
+        $diceType = isset($_POST['dice-type']) ? $_POST['dice-type'] : 'default';
+
+        saveSettingSession($cntDices, $diceType);
 
         $body = renderView("layout/dice.php", $data);
 

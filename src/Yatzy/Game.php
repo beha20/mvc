@@ -6,9 +6,6 @@ namespace Webprogramming\Yatzy;
 
 use Webprogramming\Yatzy\DiceHand;
 
-use function Mos\Functions\renderView;
-use function Mos\Functions\sendResponse;
-
 /**
  * Class Game.
  */
